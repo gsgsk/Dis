@@ -1,0 +1,330 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class MarkupLan {
+
+	static ArrayList<NetworkMachine> machines = new ArrayList<NetworkMachine> ();
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//System.out.println("Hello World!!!");
+		
+		
+		//Creating a JSON parser
+		JSONParser parser = new JSONParser();
+		
+		Object obj;
+		try {
+			//Copying the file into a JSON object
+			obj = parser.parse (new FileReader("/home/csc/Desktop/Dissertation/abc/dump.json"));
+			
+			//Creating a JSON array
+			JSONArray json = (JSONArray) obj;
+			//System.out.println(json);
+			
+			JSONObject jsonObj = new JSONObject();
+			JSONObject source = new JSONObject();
+			JSONObject layers = new JSONObject();
+			JSONObject arp = new JSONObject();
+			JSONObject ip = new JSONObject();
+			JSONObject icmp = new JSONObject ();
+			JSONObject sll = new JSONObject();
+			
+			NetworkMachine src, dst;
+			NetworkMachine temp;
+			
+			boolean containsSrc = false, containsDst = false;
+			
+			//Looping through the JSON array to look for arp packets
+			for (int i = 0; i < json.size(); i++)
+			{
+				//System.out.println(i);
+				//System.out.println(json[i].);
+				jsonObj = (JSONObject) json.get(i);
+				//System.out.println(jsonObj.get("_source"));
+				source = (JSONObject) jsonObj.get("_source");
+				//System.out.println(source);
+				layers = (JSONObject) source.get("layers");
+				//System.out.println(layers);
+				
+				//Checking if the packet contains arp data
+				if (layers.containsKey("arp"))
+				{
+					//System.out.println(layers.get("arp"));
+					arp = (JSONObject) layers.get("arp");
+					
+					//Ensuring that both the machines exist in the network & the arp wasn't a failed request
+					if (arp.get("arp.opcode").equals("2"))
+					{
+						/*System.out.println(i);
+						System.out.println("Source ip: " + arp.get("arp.src.proto_ipv4"));
+						System.out.println("Source mac: " + arp.get("arp.src.hw_mac"));
+						System.out.println("Destination ip: " + arp.get("arp.dst.proto_ipv4"));
+						System.out.println("Destination mac: " + arp.get("arp.dst.hw_mac"));
+						System.out.println("");*/
+						
+						//Copying the source and the distination addresses
+						src = new NetworkMachine (arp.get("arp.src.proto_ipv4"),arp.get("arp.src.hw_mac"));
+						dst = new NetworkMachine (arp.get("arp.dst.proto_ipv4"),arp.get("arp.dst.hw_mac"));
+						
+						if (machines.size() == 0)
+						{
+							//Adding the machines to the arraylist
+							machines.add(src);
+							machines.add(dst);
+						}
+						
+						//Ensuring no duplicates exists
+						else
+						{
+							//Working through the code to ensure it works.... this commented blocked can be ignored
+							/*System.out.println(i);
+							System.out.println("Source");
+							/*for (int j = 0 ;j<machines.size();j++)
+							{
+								temp = machines.get(j);
+								if (temp.equals(src))
+								{
+									containsSrc = true;
+								}
+							}
+							System.out.println(containsSrc);
+							containsSrc = false;
+							System.out.println(machines.contains(src));
+							src.print();
+							System.out.println();
+							System.out.println();
+							
+							System.out.println("Distination");
+							
+							for (int j = 0 ;j<machines.size();j++)
+							{
+								temp = machines.get(j);
+								if (temp.equals(dst))
+								{
+									containsDst = true;
+								}
+							}
+							System.out.println(containsDst);
+							containsDst = false;
+							System.out.println(machines.contains(dst));
+							dst.print();
+							System.out.println();
+							System.out.println();*/
+							
+							//If the machine doesn't already exists in the arraylist then it is added
+							if (!machines.contains(src))
+							{
+								machines.add(src);
+							}
+							
+							//If the machine doesn't already exists in the arraylist then it is added
+							if (!machines.contains(dst))
+							{
+								machines.add(dst);
+							}
+							
+						}
+					}
+				}
+			}
+			
+			for (int i = 0; i < json.size(); i++)
+			{
+				jsonObj = (JSONObject) json.get(i);
+				source = (JSONObject) jsonObj.get("_source");
+				layers = (JSONObject) source.get("layers");
+				
+				if (layers.containsKey("icmp"))
+				{
+					icmp = (JSONObject) layers.get("icmp");
+					
+					//System.out.println(i);
+					//Ensuring that both machines exists in the network
+					if(icmp.get("icmp.type").equals("8"))
+					{
+						System.out.println(i);
+						System.out.println("ICMP Ping request");
+						
+						ip = (JSONObject) layers.get("ip");
+						sll = (JSONObject) layers.get("sll");
+						
+						src = new NetworkMachine (ip.get("ip.src_host"),sll.get("sll.src.eth"));
+						dst = new NetworkMachine (ip.get("ip.dst_host"));
+						
+						src.print();
+						dst.print();
+						System.out.println();
+						System.out.println();
+					}
+					
+				}
+				System.out.println();
+				System.out.println();
+			}
+			
+			
+			for (int i=0; i<machines.size(); i++)
+			{
+				//System.out.println("This part works!!!");
+				temp = machines.get(i);
+				temp.print();
+				
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}
+
+class NetworkMachine
+{
+	private String ip;
+	private String mac_add;
+	private boolean gwDevice = false;
+	
+	
+	
+	/**
+	 * 
+	 */
+	public NetworkMachine() {
+		super();
+	}
+
+	public NetworkMachine(String ip, String mac_add, boolean gwDevice) {
+		super();
+		this.ip = ip;
+		this.mac_add = mac_add;
+		this.gwDevice = gwDevice;
+	}
+	
+	/**
+	 * @param object
+	 * @param object2
+	 */
+	public NetworkMachine(Object object, Object object2) {
+		super();
+		this.ip = (String) object;
+		this.mac_add = (String) object2;
+	}
+	
+	
+
+	public NetworkMachine(Object object) {
+		// TODO Auto-generated constructor stub
+		super();
+		this.ip = (String) object;
+	}
+
+	/**
+	 * @return the ip
+	 */
+	public String getIp() {
+		return ip;
+	}
+	/**
+	 * @param ip the ip to set
+	 */
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+	/**
+	 * @return the mac_add
+	 */
+	public String getMac_add() {
+		return mac_add;
+	}
+	/**
+	 * @param mac_add the mac_add to set
+	 */
+	public void setMac_add(String mac_add) {
+		this.mac_add = mac_add;
+	}
+	/**
+	 * @return the gwDevice
+	 */
+	public boolean isgwDevice() {
+		return gwDevice;
+	}
+	/**
+	 * @param gwDevice the gwDevice to set
+	 */
+	public void setgwDevice(boolean gwDevice) {
+		this.gwDevice = gwDevice;
+	}
+	
+	public void print() {
+		System.out.println("IP address = " + ip + " MAC address = " + mac_add + " Gateway Device = " + gwDevice);
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (gwDevice ? 1231 : 1237);
+		result = prime * result + ((ip == null) ? 0 : ip.hashCode());
+		result = prime * result + ((mac_add == null) ? 0 : mac_add.hashCode());
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		NetworkMachine other = (NetworkMachine) obj;
+		if (gwDevice != other.gwDevice)
+			return false;
+		if (ip == null) {
+			if (other.ip != null)
+				return false;
+		} else if (!ip.equals(other.ip))
+			return false;
+		if (mac_add == null) {
+			if (other.mac_add != null)
+				return false;
+		} else if (!mac_add.equals(other.mac_add))
+			return false;
+		return true;
+	}
+	
+	
+	
+}
+
+/*Tutorials and websites used for coding and understanding the concepts
+ * Arraylist:-
+ * https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
+ * https://beginnersbook.com/2013/12/java-arraylist/
+ *  
+ * JSONObject:-
+ * https://www.mkyong.com/java/json-simple-example-read-and-write-json/
+ * 
+ */

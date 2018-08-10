@@ -1,0 +1,1 @@
+tshark -T json -Y "arp || tcp || icmp"  -r /home/csc/pcap/ab.pcap > ab.json

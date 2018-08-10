@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<psml version="0" creator="wireshark/2.2.6">
+<structure>
+<section>No.</section>
+<section>Time</section>
+<section>Source</section>
+<section>Destination</section>
+<section>Protocol</section>
+<section>Length</section>
+<section>Info</section>
+</structure>
+
+<packet>
+<section>60</section>
+<section>5.255476</section>
+<section>00:00:00_00:00:11</section>
+<section>50:00:bb:22:22:22</section>
+<section>ARP</section>
+<section>42</section>
+<section>Who has 198.51.100.2? Tell 198.51.100.1</section>
+</packet>
+
+<packet>
+<section>61</section>
+<section>5.255602</section>
+<section>50:00:bb:22:22:22</section>
+<section>00:00:00_00:00:11</section>
+<section>ARP</section>
+<section>42</section>
+<section>198.51.100.2 is at 50:00:bb:22:22:22</section>
+</packet>
+
+</psml>

@@ -1,0 +1,3 @@
+tcpdump -i any -w /hostlab/dump01.pcap -s0 -v
+tshark -T json -Y "arp || icmp"  -r dump01.pcap > dump.json
+

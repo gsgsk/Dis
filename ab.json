@@ -1,0 +1,113 @@
+[
+  {
+    "_index": "packets-2018-07-06",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Oct 19, 2017 18:46:33.313371000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1508435193.313371000",
+          "frame.time_delta": "0.020334000",
+          "frame.time_delta_displayed": "0.000000000",
+          "frame.time_relative": "5.255476000",
+          "frame.number": "60",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "50:00:bb:22:22:22",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "50:00:bb:22:22:22",
+            "eth.addr": "50:00:bb:22:22:22",
+            "eth.addr_resolved": "50:00:bb:22:22:22",
+            "eth.lg": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "00:00:00:00:00:11",
+          "eth.src_tree": {
+            "eth.src_resolved": "00:00:00_00:00:11",
+            "eth.addr": "00:00:00:00:00:11",
+            "eth.addr_resolved": "00:00:00_00:00:11",
+            "eth.lg": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "1",
+          "arp.src.hw_mac": "00:00:00:00:00:11",
+          "arp.src.proto_ipv4": "198.51.100.1",
+          "arp.dst.hw_mac": "00:00:00:00:00:00",
+          "arp.dst.proto_ipv4": "198.51.100.2"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-07-06",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "1",
+          "frame.time": "Oct 19, 2017 18:46:33.313497000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1508435193.313497000",
+          "frame.time_delta": "0.000126000",
+          "frame.time_delta_displayed": "0.000126000",
+          "frame.time_relative": "5.255602000",
+          "frame.number": "61",
+          "frame.len": "42",
+          "frame.cap_len": "42",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:arp"
+        },
+        "eth": {
+          "eth.dst": "00:00:00:00:00:11",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "00:00:00_00:00:11",
+            "eth.addr": "00:00:00:00:00:11",
+            "eth.addr_resolved": "00:00:00_00:00:11",
+            "eth.lg": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "50:00:bb:22:22:22",
+          "eth.src_tree": {
+            "eth.src_resolved": "50:00:bb:22:22:22",
+            "eth.addr": "50:00:bb:22:22:22",
+            "eth.addr_resolved": "50:00:bb:22:22:22",
+            "eth.lg": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "50:00:bb:22:22:22",
+          "arp.src.proto_ipv4": "198.51.100.2",
+          "arp.dst.hw_mac": "00:00:00:00:00:11",
+          "arp.dst.proto_ipv4": "198.51.100.1"
+        }
+      }
+    }
+  }
+
+]
