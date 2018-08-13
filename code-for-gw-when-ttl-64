@@ -1,0 +1,98 @@
+boolean added = false;
+												
+												for (int k = 0; k < machines.size(); k++)
+												{
+													temp = machines.get(k);
+													
+													if (temp.getMac_add().equals(dst.getMac_add()))
+													{
+														if (temp.isgwDevice())
+														{
+															dst.setMac_add(null);
+															
+															if (notLAN.size() == 0)
+															{
+																notLAN.add(dst);
+															}
+															
+															else
+															{
+																if (!notLAN.contains(dst))
+																{
+																	notLAN.add(dst);
+																}
+															}
+															
+															added = true;
+															break;
+															
+														}
+														
+														else
+														{
+															String[] tempBrokenDown = temp.getIp().split("\\.");
+															
+															NetworkMachine temp1;
+															for (int l = 0; l < machines.size() && l != k; l++)
+															{
+																temp1 = machines.get(k);
+																String[] temp1BorkenDown = temp1.getIp().split("\\.");
+																
+																if (temp1BorkenDown[0].equals(tempBrokenDown[0]) && temp1BorkenDown[1].equals(tempBrokenDown[1]) && temp1BorkenDown[2].equals(tempBrokenDown[2]))
+																{
+																	temp.setgwDevice(true);
+																	machines.remove(k);
+																	machines.add(temp);
+																	
+																	dst.setMac_add(null);
+																	
+																	if (notLAN.size() == 0)
+																	{
+																		notLAN.add(dst);
+																	}
+																	
+																	else
+																	{
+																		if (!notLAN.contains(dst))
+																		{
+																			notLAN.add(dst);
+																		}
+																	}
+																	
+																	added = true;
+																	break;
+																}
+																
+																else
+																{
+																	dst.setgwDevice(true);
+																	machines.remove(k);
+																	machines.add(dst);
+																	
+																	temp.setMac_add(null);
+																	
+																	if (notLAN.size() == 0)
+																	{
+																		notLAN.add(temp);
+																	}
+																	
+																	else
+																	{
+																		if (!notLAN.contains(temp))
+																		{
+																			notLAN.add(temp);
+																		}
+																	}
+																	
+																	added = true;
+																	break;
+																}
+															}
+														}
+													}
+												}
+												
+												if (!added)
+												{
+													machines.add(dst);
+												}

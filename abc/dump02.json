@@ -1,0 +1,475 @@
+[
+  {
+    "_index": "packets-2018-08-12",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 12, 2018 05:44:37.330011000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534049077.330011000",
+          "frame.time_delta": "0.000000000",
+          "frame.time_delta_displayed": "0.000000000",
+          "frame.time_relative": "0.000000000",
+          "frame.number": "1",
+          "frame.len": "48",
+          "frame.cap_len": "48",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:udp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "32",
+          "ip.id": "0x00004bc6",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "17",
+          "ip.checksum": "0x00006db1",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "udp": {
+          "udp.srcport": "50502",
+          "udp.dstport": "1234",
+          "udp.port": "50502",
+          "udp.port": "1234",
+          "udp.length": "12",
+          "udp.checksum": "0x0000d2f7",
+          "udp.checksum.status": "2",
+          "udp.stream": "0"
+        },
+        "data": {
+          "data.data": "68:65:79:0a",
+          "data.len": "4"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-12",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 12, 2018 05:44:43.829886000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534049083.829886000",
+          "frame.time_delta": "1.493687000",
+          "frame.time_delta_displayed": "6.499875000",
+          "frame.time_relative": "6.499875000",
+          "frame.number": "4",
+          "frame.len": "56",
+          "frame.cap_len": "56",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:udp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "40",
+          "ip.id": "0x00004bc7",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "17",
+          "ip.checksum": "0x00006da8",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "udp": {
+          "udp.srcport": "50502",
+          "udp.dstport": "1234",
+          "udp.port": "50502",
+          "udp.port": "1234",
+          "udp.length": "20",
+          "udp.checksum": "0x00009c5b",
+          "udp.checksum.status": "2",
+          "udp.stream": "0"
+        },
+        "data": {
+          "data.data": "68:6f:77:20:69:73:20:79:6f:75:3f:0a",
+          "data.len": "12"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-12",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 12, 2018 05:44:48.841546000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534049088.841546000",
+          "frame.time_delta": "5.011660000",
+          "frame.time_delta_displayed": "5.011660000",
+          "frame.time_relative": "11.511535000",
+          "frame.number": "5",
+          "frame.len": "61",
+          "frame.cap_len": "61",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:udp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "45",
+          "ip.id": "0x00004bc8",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "17",
+          "ip.checksum": "0x00006da2",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "udp": {
+          "udp.srcport": "50502",
+          "udp.dstport": "1234",
+          "udp.port": "50502",
+          "udp.port": "1234",
+          "udp.length": "25",
+          "udp.checksum": "0x0000d931",
+          "udp.checksum.status": "2",
+          "udp.stream": "0"
+        },
+        "data": {
+          "data.data": "68:6f:70:65:20:79:6f:75:20:69:73:20:66:69:6e:65:0a",
+          "data.len": "17"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-12",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 12, 2018 05:44:53.258339000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534049093.258339000",
+          "frame.time_delta": "4.416793000",
+          "frame.time_delta_displayed": "4.416793000",
+          "frame.time_relative": "15.928328000",
+          "frame.number": "6",
+          "frame.len": "54",
+          "frame.cap_len": "54",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:udp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "38",
+          "ip.id": "0x00004bc9",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "17",
+          "ip.checksum": "0x00006da8",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "udp": {
+          "udp.srcport": "50502",
+          "udp.dstport": "1234",
+          "udp.port": "50502",
+          "udp.port": "1234",
+          "udp.length": "18",
+          "udp.checksum": "0x0000c8e0",
+          "udp.checksum.status": "2",
+          "udp.stream": "0"
+        },
+        "data": {
+          "data.data": "73:75:70:20:64:75:64:65:3f:0a",
+          "data.len": "10"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-12",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 12, 2018 05:44:59.517122000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534049099.517122000",
+          "frame.time_delta": "6.258783000",
+          "frame.time_delta_displayed": "6.258783000",
+          "frame.time_relative": "22.187111000",
+          "frame.number": "7",
+          "frame.len": "61",
+          "frame.cap_len": "61",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:udp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "45",
+          "ip.id": "0x00004bca",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "17",
+          "ip.checksum": "0x00006da0",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "udp": {
+          "udp.srcport": "50502",
+          "udp.dstport": "1234",
+          "udp.port": "50502",
+          "udp.port": "1234",
+          "udp.length": "25",
+          "udp.checksum": "0x00008aa8",
+          "udp.checksum.status": "2",
+          "udp.stream": "0"
+        },
+        "data": {
+          "data.data": "57:68:79:20:79:6f:75:20:64:6f:20:74:68:69:73:3f:0a",
+          "data.len": "17"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-12",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 12, 2018 05:45:03.161540000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534049103.161540000",
+          "frame.time_delta": "3.644418000",
+          "frame.time_delta_displayed": "3.644418000",
+          "frame.time_relative": "25.831529000",
+          "frame.number": "8",
+          "frame.len": "53",
+          "frame.cap_len": "53",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:udp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "37",
+          "ip.id": "0x00004bcb",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "17",
+          "ip.checksum": "0x00006da7",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "udp": {
+          "udp.srcport": "50502",
+          "udp.dstport": "1234",
+          "udp.port": "50502",
+          "udp.port": "1234",
+          "udp.length": "17",
+          "udp.checksum": "0x00003fb1",
+          "udp.checksum.status": "2",
+          "udp.stream": "0"
+        },
+        "data": {
+          "data.data": "6f:6b:61:79:20:62:79:65:0a",
+          "data.len": "9"
+        }
+      }
+    }
+  }
+
+]

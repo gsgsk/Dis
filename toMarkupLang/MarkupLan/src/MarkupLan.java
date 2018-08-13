@@ -2,6 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -10,7 +11,11 @@ import org.json.simple.parser.ParseException;
 
 public class MarkupLan {
 
+	//machines on Lan
 	static ArrayList<NetworkMachine> machines = new ArrayList<NetworkMachine> ();
+	
+	//machines not on lan
+	static ArrayList<NetworkMachine> notLAN = new ArrayList<NetworkMachine> ();
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -23,7 +28,7 @@ public class MarkupLan {
 		Object obj;
 		try {
 			//Copying the file into a JSON object
-			obj = parser.parse (new FileReader("/home/csc/Desktop/Dissertation/abc/dump.json"));
+			obj = parser.parse (new FileReader("/home/csc/Desktop/Dissertation/abc/dumpall.json"));
 			
 			//Creating a JSON array
 			JSONArray json = (JSONArray) obj;
@@ -36,6 +41,7 @@ public class MarkupLan {
 			JSONObject ip = new JSONObject();
 			JSONObject icmp = new JSONObject ();
 			JSONObject sll = new JSONObject();
+			JSONObject udp = new JSONObject();
 			
 			JSONObject jsonObjReply = new JSONObject ();
 			JSONObject sourceReply = new JSONObject ();
@@ -49,37 +55,28 @@ public class MarkupLan {
 			
 			boolean containsSrc = false, containsDst = false;
 			
+			int ipTTL, ipReplyTTL;
+			
 			//Looping through the JSON array to look for arp packets
 			for (int i = 0; i < json.size(); i++)
 			{
-				//System.out.println(i);
-				//System.out.println(json[i].);
 				jsonObj = (JSONObject) json.get(i);
-				//System.out.println(jsonObj.get("_source"));
 				source = (JSONObject) jsonObj.get("_source");
-				//System.out.println(source);
 				layers = (JSONObject) source.get("layers");
-				//System.out.println(layers);
 				
 				//Checking if the packet contains arp data
 				if (layers.containsKey("arp"))
 				{
-					//System.out.println(layers.get("arp"));
 					arp = (JSONObject) layers.get("arp");
 					
 					//Ensuring that both the machines exist in the network & the arp wasn't a failed request
 					if (arp.get("arp.opcode").equals("2"))
 					{
-						/*System.out.println(i);
-						System.out.println("Source ip: " + arp.get("arp.src.proto_ipv4"));
-						System.out.println("Source mac: " + arp.get("arp.src.hw_mac"));
-						System.out.println("Destination ip: " + arp.get("arp.dst.proto_ipv4"));
-						System.out.println("Destination mac: " + arp.get("arp.dst.hw_mac"));
-						System.out.println("");*/
-						
 						//Copying the source and the distination addresses
 						src = new NetworkMachine (arp.get("arp.src.proto_ipv4"),arp.get("arp.src.hw_mac"));
 						dst = new NetworkMachine (arp.get("arp.dst.proto_ipv4"),arp.get("arp.dst.hw_mac"));
+						src.setCountWithSameIPAndMac(1);
+						dst.setCountWithSameIPAndMac(1);
 						
 						if (machines.size() == 0)
 						{
@@ -90,52 +87,49 @@ public class MarkupLan {
 						
 						//Ensuring no duplicates exists
 						else
-						{
-							//Working through the code to ensure it works.... this commented blocked can be ignored
-							/*System.out.println(i);
-							System.out.println("Source");
-							/*for (int j = 0 ;j<machines.size();j++)
-							{
-								temp = machines.get(j);
-								if (temp.equals(src))
-								{
-									containsSrc = true;
-								}
-							}
-							System.out.println(containsSrc);
-							containsSrc = false;
-							System.out.println(machines.contains(src));
-							src.print();
-							System.out.println();
-							System.out.println();
-							
-							System.out.println("Distination");
-							
-							for (int j = 0 ;j<machines.size();j++)
-							{
-								temp = machines.get(j);
-								if (temp.equals(dst))
-								{
-									containsDst = true;
-								}
-							}
-							System.out.println(containsDst);
-							containsDst = false;
-							System.out.println(machines.contains(dst));
-							dst.print();
-							System.out.println();
-							System.out.println();*/
-							
+						{	
 							//If the machine doesn't already exists in the arraylist then it is added
 							if (!machines.contains(src))
 							{
 								machines.add(src);
 							}
 							
+							else if (machines.contains(src))
+							{
+								for (int j = 0; j < machines.size(); j++)
+								{
+									temp = machines.get(j);
+									
+									if (temp.equals(src))
+									{
+										temp.setCountWithSameIPAndMac(temp.getCountWithSameIPAndMac() + src.getCountWithSameIPAndMac());
+										machines.remove(j);
+										machines.add(temp);
+										break;
+									}
+								}
+							}
+							
 							//If the machine doesn't already exists in the arraylist then it is added
 							if (!machines.contains(dst))
 							{
 								machines.add(dst);
+							}
+							
+							else if (machines.contains(dst))
+							{
+								for (int j = 0; j < machines.size(); j++)
+								{
+									temp = machines.get(j);
+									
+									if (temp.equals(dst))
+									{
+										temp.setCountWithSameIPAndMac(temp.getCountWithSameIPAndMac() + dst.getCountWithSameIPAndMac());
+										machines.remove(j);
+										machines.add(temp);
+										break;
+									}
+								}
 							}
 							
 						}
@@ -153,22 +147,14 @@ public class MarkupLan {
 				{
 					icmp = (JSONObject) layers.get("icmp");
 					
-					//System.out.println(i);
 					//Ensuring that both machines exists in the network
 					if(icmp.get("icmp.type").equals("8"))
 					{
-						/*System.out.println(i);
-						System.out.println("ICMP Ping request");*/
-						
 						ip = (JSONObject) layers.get("ip");
 						sll = (JSONObject) layers.get("sll");
 						
 						src = new NetworkMachine (ip.get("ip.src_host"),sll.get("sll.src.eth"));
 						dst = new NetworkMachine (ip.get("ip.dst_host"));
-						
-						//src.print();
-						//dst.print();
-						
 						
 						for (int j = i+1; j<json.size(); j++)
 						{
@@ -182,8 +168,6 @@ public class MarkupLan {
 								
 								if((icmpReply.get("icmp.type").equals("0")) && (icmpReply.get("icmp.resp_to").equals(i+1)));
 								{
-									//System.out.println("Response found at frame " + j);
-									
 									ipReply = (JSONObject) layersReply.get("ip");
 									sllReply = (JSONObject) layersReply.get("sll");
 									
@@ -192,47 +176,373 @@ public class MarkupLan {
 										dst.setMac_add((String) sllReply.get("sll.src.eth"));
 									}
 									
-									/*src.print();
-									dst.print();*/
+									ipTTL = Integer.parseInt((String) ip.get("ip.ttl"));
+									ipReplyTTL = Integer.parseInt ((String) ipReply.get("ip.ttl"));
+									
+									if (ipTTL == 64 && ipReplyTTL == 64)
+									{	
+										src.setCountWithSameIPAndMac(1);
+										dst.setCountWithSameIPAndMac(1);
+										
+										if (machines.size() == 0)
+										{
+											machines.add(src);
+											machines.add(dst);
+										}
+										
+										//Not sure about this part...... might omit it  
+										else
+										{
+											//If the machine doesn't already exists in the arraylist then it is added
+											if (!machines.contains(src))
+											{
+												machines.add(src);
+											}
+											
+											else if (machines.contains(src))
+											{
+												for (int k = 0; k < machines.size(); k++)
+												{
+													temp = machines.get(k);
+													
+													if (temp.equals(src))
+													{
+														temp.setCountWithSameIPAndMac(temp.getCountWithSameIPAndMac() + src.getCountWithSameIPAndMac());
+														machines.remove(k);
+														machines.add(temp);
+														break;
+													}
+												}
+											}
+											
+											//If the machine doesn't already exists in the arraylist then it is added
+											if (!machines.contains(dst))
+											{
+												machines.add(dst);
+											}
+											
+											else if (machines.contains(dst))
+											{
+												for (int k = 0; k < machines.size(); k++)
+												{
+													temp = machines.get(k);
+													
+													if (temp.equals(dst))
+													{
+														temp.setCountWithSameIPAndMac(temp.getCountWithSameIPAndMac() + dst.getCountWithSameIPAndMac());
+														machines.remove(k);
+														machines.add(temp);
+														break;
+													}
+												}
+											}
+										}
+									}
+									
+									else
+									{
+										if (ipTTL < 64)
+										{
+											for (int k = 0; k < machines.size(); k++)
+											{
+												temp = machines.get(k);
+												
+												//System.out.println("machines index:" + k);
+												if (temp.getMac_add().equals(src.getMac_add()))
+												{
+													temp.setgwDevice(true);
+													temp.setCountwithDifIPAndMac(temp.getCountwithDifIPAndMac() + 1);
+													machines.remove(k);
+													machines.add(temp);
+													break;
+												}
+												
+											}
+											
+											src.setMac_add(null);
+											src.setDist(64 - ipTTL);
+											src.setCountwithDifIPAndMac(1);
+											
+											if (notLAN.size() == 0)
+											{
+												notLAN.add(src);
+											}
+											
+											else
+											{
+												if (!notLAN.contains(src))
+												{
+													notLAN.add(src);
+												}
+												
+												else if (notLAN.contains(src))
+												{
+													for (int k = 0; k < notLAN.size(); k++)
+													{
+														temp = notLAN.get(k);
+														
+														if (temp.equals(src))
+														{
+															temp.setCountwithDifIPAndMac(temp.getCountwithDifIPAndMac() + src.getCountwithDifIPAndMac());
+															notLAN.remove(k);
+															notLAN.add(temp);
+															break;
+														}
+													}
+												}
+											}
+											
+											dst.setCountWithSameIPAndMac(1);
+											
+											if (machines.size() == 0)
+											{
+												machines.add(dst);
+											}
+											
+											else
+											{
+												if (!machines.contains(dst))
+												{
+													machines.add(dst);
+												}
+												
+												else if (machines.contains(dst))
+												{
+													for (int k = 0; k < machines.size(); k++)
+													{
+														temp = machines.get(k);
+														
+														if (temp.equals(dst))
+														{
+															temp.setCountWithSameIPAndMac(temp.getCountWithSameIPAndMac() + dst.getCountWithSameIPAndMac());
+															machines.remove(k);
+															machines.add(temp);
+															break;
+														}
+													}
+												}
+											}
+										}
+										
+										if (ipReplyTTL < 64)
+										{
+											for (int k = 0; k < machines.size(); k++)
+											{
+												temp = machines.get(k);
+												
+												if (temp.getMac_add().equals(dst.getMac_add()))
+												{
+													temp.setgwDevice(true);
+													temp.setCountwithDifIPAndMac(temp.getCountwithDifIPAndMac() + 1);
+													machines.remove(k);
+													machines.add(temp);
+													break;
+												}
+											}
+											
+											dst.setMac_add(null);
+											dst.setDist(64 - ipReplyTTL);
+											dst.setCountwithDifIPAndMac(1);
+											
+											if (notLAN.size() == 0)
+											{
+												notLAN.add(dst);
+											}
+											
+											else
+											{
+												if (!notLAN.contains(dst))
+												{
+													notLAN.add(dst);
+												}
+												
+												else if (notLAN.contains(dst))
+												{
+													for (int k = 0; k < notLAN.size(); k++)
+													{
+														temp = notLAN.get(k);
+														
+														if (temp.equals(dst))
+														{
+															temp.setCountwithDifIPAndMac(temp.getCountwithDifIPAndMac() + dst.getCountwithDifIPAndMac());
+															notLAN.remove(k);
+															notLAN.add(temp);
+															break;
+														}
+													}
+												}
+											}
+											
+											src.setCountWithSameIPAndMac(1);
+											
+											if (machines.isEmpty())
+											{
+												machines.add(src);
+											}
+											
+											else
+											{
+												if (!machines.contains(src))
+												{
+													machines.add(src);
+												}
+												
+												else if (machines.contains(src))
+												{
+													for (int k = 0; k < machines.size(); k++)
+													{
+														temp = machines.get(k);
+														
+														if (temp.equals(src))
+														{
+															temp.setCountWithSameIPAndMac(temp.getCountWithSameIPAndMac() + src.getCountWithSameIPAndMac());
+															machines.remove(k);
+															machines.add(temp);
+															break;
+														}
+													}
+												}
+											}
+										}
+									}
+									break;
+								}
+							}
+						}
+					}	
+				}
+				
+				else if (layers.containsKey("udp"))
+				{
+					udp = (JSONObject) layers.get("udp");
+					sll = (JSONObject) layers.get("sll");
+					ip = (JSONObject) layers.get("ip");
+					
+					src = new NetworkMachine (ip.get("ip.src_host"),sll.get("sll.src.eth"));
+					dst = new NetworkMachine (ip.get("ip.dst_host"));
+					
+					dst.setPorts((String) udp.get("udp.dstport"));
+					
+					src.setCountWithSameIPAndMac(1);
+					dst.setCountWithSameIPAndMac(1);
+					
+					if (machines.isEmpty())
+					{
+						machines.add(src);
+						machines.add(dst);
+					}
+					
+					else
+					{
+						if (machines.contains(src))
+						{
+							for (int j = 0; j < machines.size(); j++)
+							{
+								temp = machines.get(j);
+								
+								if (temp.equals(src))
+								{
+									if (temp.getPorts() != null)
+									{
+										String[] services = temp.getPorts().split(";");
+										boolean portExists = false;
+										
+										for (int k = 0; k <= (services.length - 1); k++)
+										{
+											if (services[k].equals(src.getPorts()))
+											{
+												portExists = true;
+												break;
+											}
+										}
+										
+										if(!portExists)
+										{
+											temp.setPorts(temp.getPorts() + ";" + src.getPorts());
+										}
+									}
+										
+									else
+										temp.setPorts(src.getPorts());
+									
+									temp.setCountWithSameIPAndMac(temp.getCountWithSameIPAndMac() + src.getCountWithSameIPAndMac());
+									machines.remove(j);
+									machines.add(temp);
 									break;
 								}
 							}
 						}
 						
-						if (machines.size() == 0)
+						else
 						{
 							machines.add(src);
-							machines.add(dst);
+						}
+						
+						if (machines.contains(dst))
+						{
+							for (int j = 0; j < machines.size(); j++)
+							{
+								temp = machines.get(j);
+								
+								if (temp.equals(dst))
+								{
+									if (temp.getPorts() != null)
+									{
+										String[] services = temp.getPorts().split(";");
+										boolean portExists = false;
+										
+										for (int k = 0; k <= (services.length - 1); k++)
+										{
+											if (services[k].equals(dst.getPorts()))
+											{
+												portExists = true;
+												break;
+											}
+										}
+										
+										if(!portExists)
+										{
+											temp.setPorts(temp.getPorts() + ";" + dst.getPorts());
+										}
+									}
+									
+									else
+										temp.setPorts(dst.getPorts());
+									
+									temp.setCountWithSameIPAndMac(temp.getCountWithSameIPAndMac() + dst.getCountWithSameIPAndMac());
+									machines.remove(j);
+									machines.add(temp);
+									break;
+								}
+							}
 						}
 						
 						else
 						{
-							if (!machines.contains(src))
-							{
-								machines.add(src);
-							}
-							
-							//If the machine doesn't already exists in the arraylist then it is added
-							if (!machines.contains(dst))
-							{
-								machines.add(dst);
-							}
+							//machines.add(dst);
 						}
 					}
 					
 				}
-				/*System.out.println();
-				System.out.println();*/
 			}
 			
-			
+			System.out.println("machines:");
 			for (int i=0; i<machines.size(); i++)
 			{
-				//System.out.println("This part works!!!");
 				temp = machines.get(i);
 				temp.print();
-				
 			}
+			System.out.println();
+			System.out.println();
+			
+			System.out.println("notLAN:");
+			for (int i=0; i<notLAN.size(); i++)
+			{
+				temp = notLAN.get(i);
+				temp.print();
+			}
+			
+			createScript();
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -244,9 +554,172 @@ public class MarkupLan {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+	}
+	
+	static void createScript()
+	{
+		int LANcidr = lancidrcal();
+		int nonLANcidr = nonlancidrcal();
+		
+		
+	}
+	
+	private static int nonlancidrcal() {
+		// TODO Auto-generated method stub
+		NetworkMachine temp;
+		int cidr = 24;
+		boolean notEnoughData = false;
+		String[] startAddBroken = null;
+		String[] endAddBroken = null;
+		
+		ArrayList<String> machinesIP = new ArrayList<String> ();
+		
+		if (!notLAN.isEmpty())
+		{
+			if (notLAN.size() == 1)
+			{
+				System.out.println("Not sufficient data");
+				System.out.println("CIDR for machines not on LAN: " + cidr);
+				notEnoughData = true;
+			}
+			
+			else
+			{
+				for (int i = 0; i < notLAN.size(); i++)
+				{
+					temp = notLAN.get(i);
+					
+					if (temp.getDist() == 1)
+						machinesIP.add(temp.getIp());
+				}
+				
+				Collections.sort(machinesIP);
+				
+				String startAdd = machinesIP.get(0);
+				String endAdd = machinesIP.get(machinesIP.size() - 1);
+				
+				startAddBroken = startAdd.split("\\.");
+				endAddBroken = endAdd.split("\\.");
+			}
+			
+			if (!notEnoughData)
+			{
+				int noofMachines = Integer.parseInt(endAddBroken[3]) - Integer.parseInt(startAddBroken[3]);
+				noofMachines += 3;
+				
+				System.out.println("Number of addresses not on lan: " + noofMachines);
+				
+				cidr = 32 - (32 - Integer.numberOfLeadingZeros(noofMachines - 1));
+			}
+			
+			System.out.println("CIDR not on LAN: " +  cidr);
+		}
+		
+		return cidr;
 	}
 
+	static int lancidrcal()
+	{
+		NetworkMachine temp;
+		int cidr = 24;
+		boolean notEnoughData = false;
+		
+		ArrayList<String> machinesIP = new ArrayList<String> ();
+		
+		if (!machines.isEmpty())
+		{
+			if (machines.size() == 1)
+			{
+				System.out.println("Not sufficient data");
+				System.out.println("CIDR for machines on LAN: " + cidr);
+				notEnoughData = true;
+			}
+			
+			else
+			{
+				for (int i = 0; i < machines.size(); i++)
+				{
+					temp = machines.get(i);
+					machinesIP.add(temp.getIp());
+				}
+				
+				Collections.sort(machinesIP);
+				
+				String startAdd = machinesIP.get(0);
+				String endAdd = machinesIP.get(machinesIP.size() - 1);
+				
+				String[] startAddBroken = startAdd.split("\\.");
+				String[] endAddBroken = endAdd.split("\\.");
+				
+				boolean addsFound = false;
+				
+				if (!(startAddBroken[0].equals(endAddBroken[0]) && startAddBroken[1].equals(endAddBroken[1]) && startAddBroken[2].equals(endAddBroken[2])))
+				{
+					String[] tempBroken;
+					
+					if (machinesIP.size() >= 3)
+					{
+						tempBroken = machinesIP.get(1).split("\\.");
+						
+						if (tempBroken[0].equals(endAddBroken[0]) && tempBroken[1].equals(endAddBroken[1]) && tempBroken[2].equals(endAddBroken[2]))
+						{
+							if (!machinesIP.get(1).equals(endAdd))
+							{
+								startAdd = machinesIP.get(1);
+								startAddBroken = startAdd.split("\\.");
+								addsFound = true;
+							}
+							
+							else
+							{
+								notEnoughData = true;
+							}
+						}
+						
+						if (!addsFound)
+						{
+							tempBroken = machinesIP.get(machinesIP.size() - 2).split("\\.");
+							
+							if (tempBroken[0].equals(startAddBroken[0]) && tempBroken[1].equals(startAddBroken[1]) && tempBroken[2].equals(startAddBroken[2]))
+							{
+								if (!machinesIP.get(machinesIP.size() - 2).equals(startAdd))
+								{
+									endAdd = machinesIP.get(machinesIP.size() - 2);
+									startAddBroken = endAdd.split("\\.");
+									addsFound = true;
+								}
+								
+								else
+								{
+									notEnoughData = true;
+								}
+							}
+						}
+					}
+					
+					else
+					{
+						System.out.println("Not Enough Data for CIDR calculation");
+						notEnoughData = true;
+					}
+				}
+				
+				if (!notEnoughData)
+				{
+					int noofMachines = Integer.parseInt(endAddBroken[3]) - Integer.parseInt(startAddBroken[3]);
+					noofMachines += 3;
+					
+					System.out.println("Number of addresses on lan: " + noofMachines);
+					
+					cidr = 32 - (32 - Integer.numberOfLeadingZeros(noofMachines - 1));
+				}
+				
+				System.out.println("CIDR on LAN: " +  cidr);
+			}
+		}
+		
+		return cidr;
+	}
 }
 
 class NetworkMachine
@@ -254,8 +727,10 @@ class NetworkMachine
 	private String ip;
 	private String mac_add;
 	private boolean gwDevice = false;
-	
-	
+	private int dist = 0;
+	private String ports;
+	private int countWithSameIPAndMac;
+	private int countwithDifIPAndMac;
 	
 	/**
 	 * 
@@ -264,11 +739,15 @@ class NetworkMachine
 		super();
 	}
 
-	public NetworkMachine(String ip, String mac_add, boolean gwDevice) {
+	public NetworkMachine(String ip, String mac_add, boolean gwDevice, int dist, String ports, int countWithSameIPAndMac, int countwithDifIPAndMac) {
 		super();
 		this.ip = ip;
 		this.mac_add = mac_add;
 		this.gwDevice = gwDevice;
+		this.dist = dist;
+		this.ports = ports;
+		this.countWithSameIPAndMac = countWithSameIPAndMac;
+		this.countwithDifIPAndMac = countwithDifIPAndMac;
 	}
 	
 	/**
@@ -326,8 +805,64 @@ class NetworkMachine
 		this.gwDevice = gwDevice;
 	}
 	
+	/**
+	 * @return the dist
+	 */
+	public int getDist() {
+		return dist;
+	}
+
+	/**
+	 * @param dist the dist to set
+	 */
+	public void setDist(int dist) {
+		this.dist = dist;
+	}
+	
+	/**
+	 * @return the ports
+	 */
+	public String getPorts() {
+		return ports;
+	}
+
+	/**
+	 * @param ports the ports to set
+	 */
+	public void setPorts(String ports) {
+		this.ports = ports;
+	}
+
+	/**
+	 * @return the countWithSameIPAndMac
+	 */
+	public int getCountWithSameIPAndMac() {
+		return countWithSameIPAndMac;
+	}
+
+	/**
+	 * @param countWithSameIPAndMac the countWithSameIPAndMac to set
+	 */
+	public void setCountWithSameIPAndMac(int countWithSameIPAndMac) {
+		this.countWithSameIPAndMac = countWithSameIPAndMac;
+	}
+	
+	/**
+	 * @return the countwithDifIPAndMac
+	 */
+	public int getCountwithDifIPAndMac() {
+		return countwithDifIPAndMac;
+	}
+
+	/**
+	 * @param countwithDifIPAndMac the countwithDifIPAndMac to set
+	 */
+	public void setCountwithDifIPAndMac(int countwithDifIPAndMac) {
+		this.countwithDifIPAndMac = countwithDifIPAndMac;
+	}
+
 	public void print() {
-		System.out.println("IP address = " + ip + " MAC address = " + mac_add + " Gateway Device = " + gwDevice);
+		System.out.println("IP address = " + ip + "; MAC address = " + mac_add + "; Gateway Device = " + gwDevice + "; Service Ports = " + ports + "; Distance = " + dist + "; Number of time Packet appeared with Same IP & MAC: " + countWithSameIPAndMac + "; Number of time Packet appeared with Different IP or MAC: " + countwithDifIPAndMac);
 	}
 
 	/* (non-Javadoc)
@@ -337,6 +872,7 @@ class NetworkMachine
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + dist;
 		result = prime * result + (gwDevice ? 1231 : 1237);
 		result = prime * result + ((ip == null) ? 0 : ip.hashCode());
 		result = prime * result + ((mac_add == null) ? 0 : mac_add.hashCode());
@@ -355,8 +891,10 @@ class NetworkMachine
 		if (getClass() != obj.getClass())
 			return false;
 		NetworkMachine other = (NetworkMachine) obj;
-		if (gwDevice != other.gwDevice)
+		if (dist != other.dist)
 			return false;
+		/*if (gwDevice != other.gwDevice)
+			return false;*/
 		if (ip == null) {
 			if (other.ip != null)
 				return false;
@@ -369,9 +907,6 @@ class NetworkMachine
 			return false;
 		return true;
 	}
-	
-	
-	
 }
 
 /*Tutorials and websites used for coding and understanding the concepts

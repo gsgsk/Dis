@@ -1,0 +1,69 @@
+else
+										{
+											if (!machines.contains(src))
+											{
+												for (int k = 0; k < machines.size(); k++)
+												{
+													temp = machines.get(k);
+													
+													if (temp.getMac_add().equals(src.getMac_add()))
+													{
+														if (temp.isgwDevice())
+														{
+															if (notLAN.size() == 0)
+															{
+																notLAN.add(src);
+															}
+															
+															else
+															{
+																if (!notLAN.contains(src))
+																{
+																	notLAN.add(src);
+																}
+															}
+														}
+													}
+													
+													else
+													{
+														machines.add(src);
+													}
+												}
+											}
+											
+											//If the machine doesn't already exists in the arraylist then it is added
+											if (!machines.contains(dst))
+											{
+												for (int k = 0; k < machines.size(); k++)
+												{
+													temp = machines.get(k);
+													
+													if (temp.getMac_add().equals(dst.getMac_add()))
+													{
+														if (temp.isgwDevice())
+														{
+															if (notLAN.size() == 0)
+															{
+																notLAN.add(dst);
+															}
+															
+															else
+															{
+																if (!notLAN.contains(dst))
+																{
+																	notLAN.add(dst);
+																}
+															}
+															
+															break;
+														}
+													}
+													
+													else
+													{
+														machines.add(dst);
+													}
+												}
+											}
+										}
