@@ -1,0 +1,3481 @@
+[
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:40:56.241564000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495256.241564000",
+          "frame.time_delta": "0.000000000",
+          "frame.time_delta_displayed": "0.000000000",
+          "frame.time_relative": "0.000000000",
+          "frame.number": "1",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "1",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "1",
+          "arp.src.hw_mac": "c0:cc:cc:cc:cc:cc",
+          "arp.src.proto_ipv4": "192.168.0.3",
+          "arp.dst.hw_mac": "00:00:00:00:00:00",
+          "arp.dst.proto_ipv4": "192.168.0.2"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:40:56.241876000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495256.241876000",
+          "frame.time_delta": "0.000312000",
+          "frame.time_delta_displayed": "0.000312000",
+          "frame.time_relative": "0.000312000",
+          "frame.number": "2",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "b0:bb:bb:bb:bb:bb",
+          "arp.src.proto_ipv4": "192.168.0.2",
+          "arp.dst.hw_mac": "c0:cc:cc:cc:cc:cc",
+          "arp.dst.proto_ipv4": "192.168.0.3"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:40:56.242049000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495256.242049000",
+          "frame.time_delta": "0.000173000",
+          "frame.time_delta_displayed": "0.000173000",
+          "frame.time_relative": "0.000485000",
+          "frame.number": "3",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049cc",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00006f87",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.src_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000d856",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "1",
+          "icmp.seq_le": "256",
+          "icmp.data_time": "Aug 17, 2018 09:40:56.316571000 BST",
+          "icmp.data_time_relative": "-0.074522000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:40:56.242182000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495256.242182000",
+          "frame.time_delta": "0.000133000",
+          "frame.time_delta_displayed": "0.000133000",
+          "frame.time_relative": "0.000618000",
+          "frame.number": "4",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000060b2",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x000098a1",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000e056",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "1",
+          "icmp.seq_le": "256",
+          "icmp.resp_to": "3",
+          "icmp.resptime": "0.133",
+          "icmp.data_time": "Aug 17, 2018 09:40:56.316571000 BST",
+          "icmp.data_time_relative": "-0.074389000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:40:57.246761000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495257.246761000",
+          "frame.time_delta": "1.004579000",
+          "frame.time_delta_displayed": "1.004579000",
+          "frame.time_relative": "1.005197000",
+          "frame.number": "5",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049cd",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00006f86",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.src_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00001743",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "2",
+          "icmp.seq_le": "512",
+          "icmp.data_time": "Aug 17, 2018 09:40:57.321371000 BST",
+          "icmp.data_time_relative": "-0.074610000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:40:57.247140000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495257.247140000",
+          "frame.time_delta": "0.000379000",
+          "frame.time_delta_displayed": "0.000379000",
+          "frame.time_relative": "1.005576000",
+          "frame.number": "6",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000060b3",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x000098a0",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00001f43",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "2",
+          "icmp.seq_le": "512",
+          "icmp.resp_to": "5",
+          "icmp.resptime": "0.379",
+          "icmp.data_time": "Aug 17, 2018 09:40:57.321371000 BST",
+          "icmp.data_time_relative": "-0.074231000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:40:58.250017000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495258.250017000",
+          "frame.time_delta": "1.002877000",
+          "frame.time_delta_displayed": "1.002877000",
+          "frame.time_relative": "2.008453000",
+          "frame.number": "7",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049ce",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00006f85",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.src_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00003e34",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "3",
+          "icmp.seq_le": "768",
+          "icmp.data_time": "Aug 17, 2018 09:40:58.324915000 BST",
+          "icmp.data_time_relative": "-0.074898000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:40:58.250021000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495258.250021000",
+          "frame.time_delta": "0.000004000",
+          "frame.time_delta_displayed": "0.000004000",
+          "frame.time_relative": "2.008457000",
+          "frame.number": "8",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000060b4",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000989f",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00004634",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "3",
+          "icmp.seq_le": "768",
+          "icmp.resp_to": "7",
+          "icmp.resptime": "0.004",
+          "icmp.data_time": "Aug 17, 2018 09:40:58.324915000 BST",
+          "icmp.data_time_relative": "-0.074894000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:40:59.249401000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495259.249401000",
+          "frame.time_delta": "0.999380000",
+          "frame.time_delta_displayed": "0.999380000",
+          "frame.time_relative": "3.007837000",
+          "frame.number": "9",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049cf",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00006f84",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.src_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000e736",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "4",
+          "icmp.seq_le": "1024",
+          "icmp.data_time": "Aug 17, 2018 09:40:59.323977000 BST",
+          "icmp.data_time_relative": "-0.074576000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:40:59.249522000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495259.249522000",
+          "frame.time_delta": "0.000121000",
+          "frame.time_delta_displayed": "0.000121000",
+          "frame.time_relative": "3.007958000",
+          "frame.number": "10",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000060b5",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000989e",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000ef36",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "4",
+          "icmp.seq_le": "1024",
+          "icmp.resp_to": "9",
+          "icmp.resptime": "0.121",
+          "icmp.data_time": "Aug 17, 2018 09:40:59.323977000 BST",
+          "icmp.data_time_relative": "-0.074455000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:00.258703000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495260.258703000",
+          "frame.time_delta": "1.009181000",
+          "frame.time_delta_displayed": "1.009181000",
+          "frame.time_relative": "4.017139000",
+          "frame.number": "11",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049d0",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00006f83",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.src_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00006111",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "5",
+          "icmp.seq_le": "1280",
+          "icmp.data_time": "Aug 17, 2018 09:41:00.333326000 BST",
+          "icmp.data_time_relative": "-0.074623000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:00.259288000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495260.259288000",
+          "frame.time_delta": "0.000585000",
+          "frame.time_delta_displayed": "0.000585000",
+          "frame.time_relative": "4.017724000",
+          "frame.number": "12",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000060b6",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000989d",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00006911",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "5",
+          "icmp.seq_le": "1280",
+          "icmp.resp_to": "11",
+          "icmp.resptime": "0.585",
+          "icmp.data_time": "Aug 17, 2018 09:41:00.333326000 BST",
+          "icmp.data_time_relative": "-0.074038000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:01.246597000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495261.246597000",
+          "frame.time_delta": "0.987309000",
+          "frame.time_delta_displayed": "0.987309000",
+          "frame.time_relative": "5.005033000",
+          "frame.number": "13",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "1",
+          "arp.src.hw_mac": "b0:bb:bb:bb:bb:bb",
+          "arp.src.proto_ipv4": "192.168.0.2",
+          "arp.dst.hw_mac": "00:00:00:00:00:00",
+          "arp.dst.proto_ipv4": "192.168.0.3"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:01.246606000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495261.246606000",
+          "frame.time_delta": "0.000009000",
+          "frame.time_delta_displayed": "0.000009000",
+          "frame.time_relative": "5.005042000",
+          "frame.number": "14",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "c0:cc:cc:cc:cc:cc",
+          "arp.src.proto_ipv4": "192.168.0.3",
+          "arp.dst.hw_mac": "b0:bb:bb:bb:bb:bb",
+          "arp.dst.proto_ipv4": "192.168.0.2"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:14.606316000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495274.606316000",
+          "frame.time_delta": "13.359710000",
+          "frame.time_delta_displayed": "13.359710000",
+          "frame.time_relative": "18.364752000",
+          "frame.number": "15",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "1",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "1",
+          "arp.src.hw_mac": "c0:cc:cc:cc:cc:cc",
+          "arp.src.proto_ipv4": "192.168.0.4",
+          "arp.dst.hw_mac": "00:00:00:00:00:00",
+          "arp.dst.proto_ipv4": "192.168.0.1"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:14.606328000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495274.606328000",
+          "frame.time_delta": "0.000012000",
+          "frame.time_delta_displayed": "0.000012000",
+          "frame.time_relative": "18.364764000",
+          "frame.number": "16",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "4",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "a0:aa:aa:aa:aa:aa",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "a0:aa:aa:aa:aa:aa",
+          "arp.src.proto_ipv4": "192.168.0.1",
+          "arp.dst.hw_mac": "c0:cc:cc:cc:cc:cc",
+          "arp.dst.proto_ipv4": "192.168.0.4"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:14.606475000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495274.606475000",
+          "frame.time_delta": "0.000147000",
+          "frame.time_delta_displayed": "0.000147000",
+          "frame.time_relative": "18.364911000",
+          "frame.number": "17",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000b347",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000060c",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.src_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "ip.dst": "192.168.0.1",
+          "ip.addr": "192.168.0.1",
+          "ip.dst_host": "192.168.0.1",
+          "ip.host": "192.168.0.1",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00000dc5",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "1",
+          "icmp.seq_le": "256",
+          "icmp.data_time": "Aug 17, 2018 09:41:14.681294000 BST",
+          "icmp.data_time_relative": "-0.074819000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:14.606485000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495274.606485000",
+          "frame.time_delta": "0.000010000",
+          "frame.time_delta_displayed": "0.000010000",
+          "frame.time_relative": "18.364921000",
+          "frame.number": "18",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "4",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "a0:aa:aa:aa:aa:aa",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000b339",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000461a",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.1",
+          "ip.addr": "192.168.0.1",
+          "ip.src_host": "192.168.0.1",
+          "ip.host": "192.168.0.1",
+          "ip.dst": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.dst_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x000015c5",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "1",
+          "icmp.seq_le": "256",
+          "icmp.resp_to": "17",
+          "icmp.resptime": "0.01",
+          "icmp.data_time": "Aug 17, 2018 09:41:14.681294000 BST",
+          "icmp.data_time_relative": "-0.074809000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:15.605793000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495275.605793000",
+          "frame.time_delta": "0.999308000",
+          "frame.time_delta_displayed": "0.999308000",
+          "frame.time_relative": "19.364229000",
+          "frame.number": "19",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000b348",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000060b",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.src_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "ip.dst": "192.168.0.1",
+          "ip.addr": "192.168.0.1",
+          "ip.dst_host": "192.168.0.1",
+          "ip.host": "192.168.0.1",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000d4c7",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "2",
+          "icmp.seq_le": "512",
+          "icmp.data_time": "Aug 17, 2018 09:41:15.680326000 BST",
+          "icmp.data_time_relative": "-0.074533000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:15.605867000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495275.605867000",
+          "frame.time_delta": "0.000074000",
+          "frame.time_delta_displayed": "0.000074000",
+          "frame.time_relative": "19.364303000",
+          "frame.number": "20",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "4",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "a0:aa:aa:aa:aa:aa",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000b33a",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00004619",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.1",
+          "ip.addr": "192.168.0.1",
+          "ip.src_host": "192.168.0.1",
+          "ip.host": "192.168.0.1",
+          "ip.dst": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.dst_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000dcc7",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "2",
+          "icmp.seq_le": "512",
+          "icmp.resp_to": "19",
+          "icmp.resptime": "0.074",
+          "icmp.data_time": "Aug 17, 2018 09:41:15.680326000 BST",
+          "icmp.data_time_relative": "-0.074459000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:16.614477000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495276.614477000",
+          "frame.time_delta": "1.008610000",
+          "frame.time_delta_displayed": "1.008610000",
+          "frame.time_relative": "20.372913000",
+          "frame.number": "21",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000b349",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000060a",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.src_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "ip.dst": "192.168.0.1",
+          "ip.addr": "192.168.0.1",
+          "ip.dst_host": "192.168.0.1",
+          "ip.host": "192.168.0.1",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00002da5",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "3",
+          "icmp.seq_le": "768",
+          "icmp.data_time": "Aug 17, 2018 09:41:16.688940000 BST",
+          "icmp.data_time_relative": "-0.074463000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:16.614501000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495276.614501000",
+          "frame.time_delta": "0.000024000",
+          "frame.time_delta_displayed": "0.000024000",
+          "frame.time_relative": "20.372937000",
+          "frame.number": "22",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "4",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "a0:aa:aa:aa:aa:aa",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000b33b",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00004618",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.1",
+          "ip.addr": "192.168.0.1",
+          "ip.src_host": "192.168.0.1",
+          "ip.host": "192.168.0.1",
+          "ip.dst": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.dst_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x000035a5",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "3",
+          "icmp.seq_le": "768",
+          "icmp.resp_to": "21",
+          "icmp.resptime": "0.024",
+          "icmp.data_time": "Aug 17, 2018 09:41:16.688940000 BST",
+          "icmp.data_time_relative": "-0.074439000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:17.615835000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495277.615835000",
+          "frame.time_delta": "1.001334000",
+          "frame.time_delta_displayed": "1.001334000",
+          "frame.time_relative": "21.374271000",
+          "frame.number": "23",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000b34a",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00000609",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.src_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "ip.dst": "192.168.0.1",
+          "ip.addr": "192.168.0.1",
+          "ip.dst_host": "192.168.0.1",
+          "ip.host": "192.168.0.1",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000279d",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "4",
+          "icmp.seq_le": "1024",
+          "icmp.data_time": "Aug 17, 2018 09:41:17.690737000 BST",
+          "icmp.data_time_relative": "-0.074902000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:17.615855000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495277.615855000",
+          "frame.time_delta": "0.000020000",
+          "frame.time_delta_displayed": "0.000020000",
+          "frame.time_relative": "21.374291000",
+          "frame.number": "24",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "4",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "a0:aa:aa:aa:aa:aa",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000b33c",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00004617",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.1",
+          "ip.addr": "192.168.0.1",
+          "ip.src_host": "192.168.0.1",
+          "ip.host": "192.168.0.1",
+          "ip.dst": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.dst_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00002f9d",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "4",
+          "icmp.seq_le": "1024",
+          "icmp.resp_to": "23",
+          "icmp.resptime": "0.02",
+          "icmp.data_time": "Aug 17, 2018 09:41:17.690737000 BST",
+          "icmp.data_time_relative": "-0.074882000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:18.619223000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495278.619223000",
+          "frame.time_delta": "1.003368000",
+          "frame.time_delta_displayed": "1.003368000",
+          "frame.time_relative": "22.377659000",
+          "frame.number": "25",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000b34b",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00000608",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.src_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "ip.dst": "192.168.0.1",
+          "ip.addr": "192.168.0.1",
+          "ip.dst_host": "192.168.0.1",
+          "ip.host": "192.168.0.1",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000518f",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "5",
+          "icmp.seq_le": "1280",
+          "icmp.data_time": "Aug 17, 2018 09:41:18.694022000 BST",
+          "icmp.data_time_relative": "-0.074799000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:18.619244000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495278.619244000",
+          "frame.time_delta": "0.000021000",
+          "frame.time_delta_displayed": "0.000021000",
+          "frame.time_relative": "22.377680000",
+          "frame.number": "26",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "4",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "a0:aa:aa:aa:aa:aa",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000b33d",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00004616",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.1",
+          "ip.addr": "192.168.0.1",
+          "ip.src_host": "192.168.0.1",
+          "ip.host": "192.168.0.1",
+          "ip.dst": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.dst_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000598f",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "5",
+          "icmp.seq_le": "1280",
+          "icmp.resp_to": "25",
+          "icmp.resptime": "0.021",
+          "icmp.data_time": "Aug 17, 2018 09:41:18.694022000 BST",
+          "icmp.data_time_relative": "-0.074778000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:19.613309000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495279.613309000",
+          "frame.time_delta": "0.994065000",
+          "frame.time_delta_displayed": "0.994065000",
+          "frame.time_relative": "23.371745000",
+          "frame.number": "27",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "4",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "a0:aa:aa:aa:aa:aa",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "1",
+          "arp.src.hw_mac": "a0:aa:aa:aa:aa:aa",
+          "arp.src.proto_ipv4": "192.168.0.1",
+          "arp.dst.hw_mac": "00:00:00:00:00:00",
+          "arp.dst.proto_ipv4": "192.168.0.4"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:19.617388000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495279.617388000",
+          "frame.time_delta": "0.004079000",
+          "frame.time_delta_displayed": "0.004079000",
+          "frame.time_relative": "23.375824000",
+          "frame.number": "28",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "0",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "c0:cc:cc:cc:cc:cc",
+          "arp.src.proto_ipv4": "192.168.0.4",
+          "arp.dst.hw_mac": "a0:aa:aa:aa:aa:aa",
+          "arp.dst.proto_ipv4": "192.168.0.1"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:31.498709000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495291.498709000",
+          "frame.time_delta": "11.881321000",
+          "frame.time_delta_displayed": "11.881321000",
+          "frame.time_relative": "35.257145000",
+          "frame.number": "29",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000060b7",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000589c",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00005277",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "1",
+          "icmp.seq_le": "256",
+          "icmp.data_time": "Aug 17, 2018 09:41:31.570362000 BST",
+          "icmp.data_time_relative": "-0.071653000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:31.498794000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495291.498794000",
+          "frame.time_delta": "0.000085000",
+          "frame.time_delta_displayed": "0.000085000",
+          "frame.time_relative": "35.257230000",
+          "frame.number": "30",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049d1",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000af82",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.src_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00005a77",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "1",
+          "icmp.seq_le": "256",
+          "icmp.resp_to": "29",
+          "icmp.resptime": "0.085",
+          "icmp.data_time": "Aug 17, 2018 09:41:31.570362000 BST",
+          "icmp.data_time_relative": "-0.071568000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:32.498034000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495292.498034000",
+          "frame.time_delta": "0.999240000",
+          "frame.time_delta_displayed": "0.999240000",
+          "frame.time_relative": "36.256470000",
+          "frame.number": "31",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000060b8",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000589b",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000a879",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "2",
+          "icmp.seq_le": "512",
+          "icmp.data_time": "Aug 17, 2018 09:41:32.569507000 BST",
+          "icmp.data_time_relative": "-0.071473000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:32.498653000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495292.498653000",
+          "frame.time_delta": "0.000619000",
+          "frame.time_delta_displayed": "0.000619000",
+          "frame.time_relative": "36.257089000",
+          "frame.number": "32",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049d2",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000af81",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.src_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000b079",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "2",
+          "icmp.seq_le": "512",
+          "icmp.resp_to": "31",
+          "icmp.resptime": "0.619",
+          "icmp.data_time": "Aug 17, 2018 09:41:32.569507000 BST",
+          "icmp.data_time_relative": "-0.070854000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:33.507590000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495293.507590000",
+          "frame.time_delta": "1.008937000",
+          "frame.time_delta_displayed": "1.008937000",
+          "frame.time_relative": "37.266026000",
+          "frame.number": "33",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000060b9",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000589a",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00007352",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "3",
+          "icmp.seq_le": "768",
+          "icmp.data_time": "Aug 17, 2018 09:41:33.579287000 BST",
+          "icmp.data_time_relative": "-0.071697000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:33.508144000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495293.508144000",
+          "frame.time_delta": "0.000554000",
+          "frame.time_delta_displayed": "0.000554000",
+          "frame.time_relative": "37.266580000",
+          "frame.number": "34",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049d3",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000af80",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.src_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00007b52",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "3",
+          "icmp.seq_le": "768",
+          "icmp.resp_to": "33",
+          "icmp.resptime": "0.554",
+          "icmp.data_time": "Aug 17, 2018 09:41:33.579287000 BST",
+          "icmp.data_time_relative": "-0.071143000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:34.514299000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495294.514299000",
+          "frame.time_delta": "1.006155000",
+          "frame.time_delta_displayed": "1.006155000",
+          "frame.time_relative": "38.272735000",
+          "frame.number": "35",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000060ba",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x00005899",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.dst_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000d738",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "4",
+          "icmp.seq_le": "1024",
+          "icmp.data_time": "Aug 17, 2018 09:41:34.585586000 BST",
+          "icmp.data_time_relative": "-0.071287000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:34.514534000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495294.514534000",
+          "frame.time_delta": "0.000235000",
+          "frame.time_delta_displayed": "0.000235000",
+          "frame.time_relative": "38.272970000",
+          "frame.number": "36",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049d4",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000af7f",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.3",
+          "ip.addr": "192.168.0.3",
+          "ip.src_host": "192.168.0.3",
+          "ip.host": "192.168.0.3",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000df38",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1515",
+          "icmp.ident": "60165",
+          "icmp.seq": "4",
+          "icmp.seq_le": "1024",
+          "icmp.resp_to": "35",
+          "icmp.resptime": "0.235",
+          "icmp.data_time": "Aug 17, 2018 09:41:34.585586000 BST",
+          "icmp.data_time_relative": "-0.071052000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:36.501608000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495296.501608000",
+          "frame.time_delta": "1.987074000",
+          "frame.time_delta_displayed": "1.987074000",
+          "frame.time_relative": "40.260044000",
+          "frame.number": "37",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "1",
+          "arp.src.hw_mac": "c0:cc:cc:cc:cc:cc",
+          "arp.src.proto_ipv4": "192.168.0.3",
+          "arp.dst.hw_mac": "00:00:00:00:00:00",
+          "arp.dst.proto_ipv4": "192.168.0.2"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:36.502221000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495296.502221000",
+          "frame.time_delta": "0.000613000",
+          "frame.time_delta_displayed": "0.000613000",
+          "frame.time_relative": "40.260657000",
+          "frame.number": "38",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "b0:bb:bb:bb:bb:bb",
+          "arp.src.proto_ipv4": "192.168.0.2",
+          "arp.dst.hw_mac": "c0:cc:cc:cc:cc:cc",
+          "arp.dst.proto_ipv4": "192.168.0.3"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:37.567842000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495297.567842000",
+          "frame.time_delta": "1.065621000",
+          "frame.time_delta_displayed": "1.065621000",
+          "frame.time_relative": "41.326278000",
+          "frame.number": "39",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "1",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "1",
+          "arp.src.hw_mac": "b0:bb:bb:bb:bb:bb",
+          "arp.src.proto_ipv4": "192.168.0.2",
+          "arp.dst.hw_mac": "00:00:00:00:00:00",
+          "arp.dst.proto_ipv4": "192.168.0.4"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:37.568035000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495297.568035000",
+          "frame.time_delta": "0.000193000",
+          "frame.time_delta_displayed": "0.000193000",
+          "frame.time_relative": "41.326471000",
+          "frame.number": "40",
+          "frame.len": "44",
+          "frame.cap_len": "44",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:arp"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000806"
+        },
+        "arp": {
+          "arp.hw.type": "1",
+          "arp.proto.type": "0x00000800",
+          "arp.hw.size": "6",
+          "arp.proto.size": "4",
+          "arp.opcode": "2",
+          "arp.src.hw_mac": "c0:cc:cc:cc:cc:cc",
+          "arp.src.proto_ipv4": "192.168.0.4",
+          "arp.dst.hw_mac": "b0:bb:bb:bb:bb:bb",
+          "arp.dst.proto_ipv4": "192.168.0.2"
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:37.568184000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495297.568184000",
+          "frame.time_delta": "0.000149000",
+          "frame.time_delta_displayed": "0.000149000",
+          "frame.time_relative": "41.326620000",
+          "frame.number": "41",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000ebb7",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000cd9a",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.dst_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00009b69",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "1",
+          "icmp.seq_le": "256",
+          "icmp.data_time": "Aug 17, 2018 09:41:37.639146000 BST",
+          "icmp.data_time_relative": "-0.070962000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:37.568459000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495297.568459000",
+          "frame.time_delta": "0.000275000",
+          "frame.time_delta_displayed": "0.000275000",
+          "frame.time_relative": "41.326895000",
+          "frame.number": "42",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049d5",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000af7d",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.src_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000a369",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "1",
+          "icmp.seq_le": "256",
+          "icmp.resp_to": "41",
+          "icmp.resptime": "0.275",
+          "icmp.data_time": "Aug 17, 2018 09:41:37.639146000 BST",
+          "icmp.data_time_relative": "-0.070687000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:38.571815000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495298.571815000",
+          "frame.time_delta": "1.003356000",
+          "frame.time_delta_displayed": "1.003356000",
+          "frame.time_relative": "42.330251000",
+          "frame.number": "43",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000ebb8",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000cd99",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.dst_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000545a",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "2",
+          "icmp.seq_le": "512",
+          "icmp.data_time": "Aug 17, 2018 09:41:38.642800000 BST",
+          "icmp.data_time_relative": "-0.070985000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:38.572580000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495298.572580000",
+          "frame.time_delta": "0.000765000",
+          "frame.time_delta_displayed": "0.000765000",
+          "frame.time_relative": "42.331016000",
+          "frame.number": "44",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049d6",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000af7c",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.src_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00005c5a",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "2",
+          "icmp.seq_le": "512",
+          "icmp.resp_to": "43",
+          "icmp.resptime": "0.765",
+          "icmp.data_time": "Aug 17, 2018 09:41:38.642800000 BST",
+          "icmp.data_time_relative": "-0.070220000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:39.579557000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495299.579557000",
+          "frame.time_delta": "1.006977000",
+          "frame.time_delta_displayed": "1.006977000",
+          "frame.time_relative": "43.337993000",
+          "frame.number": "45",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000ebb9",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000cd98",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.dst_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000363a",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "3",
+          "icmp.seq_le": "768",
+          "icmp.data_time": "Aug 17, 2018 09:41:39.650765000 BST",
+          "icmp.data_time_relative": "-0.071208000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:39.580256000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495299.580256000",
+          "frame.time_delta": "0.000699000",
+          "frame.time_delta_displayed": "0.000699000",
+          "frame.time_relative": "43.338692000",
+          "frame.number": "46",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049d7",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000af7b",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.src_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00003e3a",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "3",
+          "icmp.seq_le": "768",
+          "icmp.resp_to": "45",
+          "icmp.resptime": "0.699",
+          "icmp.data_time": "Aug 17, 2018 09:41:39.650765000 BST",
+          "icmp.data_time_relative": "-0.070509000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:40.591046000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495300.591046000",
+          "frame.time_delta": "1.010790000",
+          "frame.time_delta_displayed": "1.010790000",
+          "frame.time_relative": "44.349482000",
+          "frame.number": "47",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "b0:bb:bb:bb:bb:bb",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x0000ebba",
+          "ip.flags": "0x00000002",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000cd97",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.src_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "ip.dst": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.dst_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.checksum": "0x0000330c",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "4",
+          "icmp.seq_le": "1024",
+          "icmp.data_time": "Aug 17, 2018 09:41:40.662287000 BST",
+          "icmp.data_time_relative": "-0.071241000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+  ,
+  {
+    "_index": "packets-2018-08-17",
+    "_type": "pcap_file",
+    "_score": null,
+    "_source": {
+      "layers": {
+        "frame": {
+          "frame.encap_type": "25",
+          "frame.time": "Aug 17, 2018 09:41:40.591538000 BST",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_epoch": "1534495300.591538000",
+          "frame.time_delta": "0.000492000",
+          "frame.time_delta_displayed": "0.000492000",
+          "frame.time_relative": "44.349974000",
+          "frame.number": "48",
+          "frame.len": "100",
+          "frame.cap_len": "100",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "sll:ethertype:ip:icmp:data"
+        },
+        "sll": {
+          "sll.pkttype": "3",
+          "sll.hatype": "1",
+          "sll.halen": "6",
+          "sll.src.eth": "c0:cc:cc:cc:cc:cc",
+          "sll.etype": "0x00000800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00000000",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "84",
+          "ip.id": "0x000049d8",
+          "ip.flags": "0x00000000",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "64",
+          "ip.proto": "1",
+          "ip.checksum": "0x0000af7a",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.0.4",
+          "ip.addr": "192.168.0.4",
+          "ip.src_host": "192.168.0.4",
+          "ip.host": "192.168.0.4",
+          "ip.dst": "192.168.0.2",
+          "ip.addr": "192.168.0.2",
+          "ip.dst_host": "192.168.0.2",
+          "ip.host": "192.168.0.2",
+          "Source GeoIP: Unknown": "",
+          "Destination GeoIP: Unknown": ""
+        },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.checksum": "0x00003b0c",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1516",
+          "icmp.ident": "60421",
+          "icmp.seq": "4",
+          "icmp.seq_le": "1024",
+          "icmp.resp_to": "47",
+          "icmp.resptime": "0.492",
+          "icmp.data_time": "Aug 17, 2018 09:41:40.662287000 BST",
+          "icmp.data_time_relative": "-0.070749000",
+          "data": {
+            "data.data": "08:09:0a:0b:0c:0d:0e:0f:10:11:12:13:14:15:16:17:18:19:1a:1b:1c:1d:1e:1f:20:21:22:23:24:25:26:27:28:29:2a:2b:2c:2d:2e:2f:30:31:32:33:34:35:36:37",
+            "data.len": "48"
+          }
+        }
+      }
+    }
+  }
+
+]

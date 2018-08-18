@@ -106,7 +106,7 @@
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_-GuTi4DREeixFphTtGJzIA" containerData="8456" selectedElement="_-GuTjIDREeixFphTtGJzIA">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_-GuTjIDREeixFphTtGJzIA" containerData="7477" selectedElement="_-GuTjYDREeixFphTtGJzIA" horizontal="true">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_-GuTjIDREeixFphTtGJzIA" containerData="8128" selectedElement="_-GuTjYDREeixFphTtGJzIA" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_-GuTjYDREeixFphTtGJzIA" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_-FQT4IDREeixFphTtGJzIA"/>
                 <children xsi:type="basic:PartSashContainer" xmi:id="_-GuTjoDREeixFphTtGJzIA" containerData="2500" selectedElement="_-GuTj4DREeixFphTtGJzIA">
                   <children xsi:type="basic:PartStack" xmi:id="_-GuTj4DREeixFphTtGJzIA" elementId="org.eclipse.mylyn.tasks.ui.views.tasksMStack" containerData="5000" selectedElement="_-GuTkIDREeixFphTtGJzIA">
@@ -133,7 +133,7 @@
                   </children>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_-GuTlYDREeixFphTtGJzIA" elementId="bottom" containerData="2523" selectedElement="_-GuTmoDREeixFphTtGJzIA">
+              <children xsi:type="basic:PartStack" xmi:id="_-GuTlYDREeixFphTtGJzIA" elementId="bottom" containerData="1872" selectedElement="_-GuTmoDREeixFphTtGJzIA">
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
                 <tags>Java</tags>
                 <tags>Debug</tags>
@@ -240,7 +240,7 @@
                 <tags>categoryTag:Java</tags>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_VY0tV5w3EeiJnP1Zi7N9PQ" containerData="7500" selectedElement="_VY0tYZw3EeiJnP1Zi7N9PQ">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_VY0tV5w3EeiJnP1Zi7N9PQ" containerData="7500" selectedElement="_VY0tWJw3EeiJnP1Zi7N9PQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_VY0tWJw3EeiJnP1Zi7N9PQ" containerData="7500" selectedElement="_VY0tWZw3EeiJnP1Zi7N9PQ" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_VY0tWZw3EeiJnP1Zi7N9PQ" elementId="org.eclipse.ui.editorss" containerData="6500" ref="_-FQT4IDREeixFphTtGJzIA"/>
                 <children xsi:type="basic:PartStack" xmi:id="_VY0tWpw3EeiJnP1Zi7N9PQ" elementId="org.eclipse.debug.internal.ui.OutlineFolderView" containerData="3500" selectedElement="_VY0tXZw3EeiJnP1Zi7N9PQ">
@@ -360,7 +360,7 @@
         <tags>active</tags>
         <tags>noFocus</tags>
         <children xsi:type="basic:Part" xmi:id="_fuR48IDSEeixFphTtGJzIA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MarkupLan.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MarkupLan.java&quot; partName=&quot;MarkupLan.java&quot; title=&quot;MarkupLan.java&quot; tooltip=&quot;MarkupLan/src/MarkupLan.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/MarkupLan/src/MarkupLan.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;19241&quot; selectionTopPixel=&quot;19599&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MarkupLan.java&quot; partName=&quot;MarkupLan.java&quot; title=&quot;MarkupLan.java&quot; tooltip=&quot;MarkupLan/src/MarkupLan.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/MarkupLan/src/MarkupLan.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;799&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -616,7 +616,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9pzuAIDREeixFphTtGJzIA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_vwMiEJ9KEeinlLWDtls9Ww" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_82roH4DREeixFphTtGJzIA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Z_Ln0KHyEeiSP8AUm0xbtQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_82roH4DREeixFphTtGJzIA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9pzuAYDREeixFphTtGJzIA" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -647,7 +647,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9p1jMIDREeixFphTtGJzIA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_vwQMcJ9KEeinlLWDtls9Ww" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_82qaAoDREeixFphTtGJzIA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Z_P5QKHyEeiSP8AUm0xbtQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_82qaAoDREeixFphTtGJzIA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9p3_cIDREeixFphTtGJzIA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

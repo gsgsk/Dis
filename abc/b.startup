@@ -1,2 +1,2 @@
 ifconfig eth0 hw ether b0:bb:bb:bb:bb:bb
-ifconfig eth0 192.168.0.2/28
+ifconfig eth0 192.168.0.2/29
